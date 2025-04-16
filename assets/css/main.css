@@ -25,6 +25,12 @@ body{
   color: #fff;
 }
 
+@media (max-width: 1480px) {
+  .toc {
+    display: none !important;
+  }
+}
+
 p {
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.5;
@@ -182,8 +188,10 @@ h6::before { color: var(--maincolor); content: '###### '; }
   max-width: 300px;
   overflow-y: auto;
   padding: 10px;
-  position: sticky;
-  top: 20px;
+  /* position: sticky; */
+  position: fixed;
+  right: 30px;
+  top: 100px;
 }
 
 /* Footer */
