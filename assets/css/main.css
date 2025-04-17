@@ -1,21 +1,24 @@
 /* Markdown */
-:root{
---maincolor: red;
---bordercl:rebeccapurple;
---callouctcolor:dodgerblue;
---hovercolor:navy;
---darkMaincolor: #50fa7b;
+:root {
+  --maincolor: red;
+  --bordercl: rebeccapurple;
+  --callouctcolor: dodgerblue;
+  --hovercolor: navy;
+  --darkMaincolor: #50fa7b;
 }
+
 html {
   color: #232333;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 15px;
-  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6rem;
 }
-body{
+
+body {
   display: block;
   margin: 8px;
 }
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -25,48 +28,45 @@ body{
   color: #fff;
 }
 
-@media (max-width: 1480px) {
-  .toc {
-    display: none !important;
-  }
-}
-
-p {
+/* p {
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.5;
-}
+} */
 
 hr {
   border: 0;
   border-top: 3px dotted var(--bordercl);
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 blockquote {
   border-left: 3px solid var(--bordercl);
   color: #737373;
   margin: 0;
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 a {
-  border-bottom: 3px solid var(--maincolor);
+  border-bottom: 2px dashed var(--maincolor);
   color: inherit;
   text-decoration: none;
 }
+
 a:hover {
-    background-color: var(--hovercolor);
-    color: #fff;
+  background-color: var(--hovercolor);
+  color: #fff;
 }
 
 ul {
   list-style: none;
   padding-left: 2ch;
 }
+
 ul li {
   text-indent: -2ch;
 }
-ul > li::before {
+
+ul>li::before {
   content: '* ';
   font-weight: bold;
 }
@@ -94,11 +94,18 @@ figure img {
   }
 }
 
+@media (max-width: 1480px) {
+  .toc {
+    display: none !important;
+  }
+}
+
 figure h4 {
   font-size: 1rem;
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
+
 figure h4::before {
   content: '↳ ';
 }
@@ -106,18 +113,18 @@ figure h4::before {
 /* Code blocks */
 code {
   background-color: #f1f1f1;
-  padding: .1em .2em;
+  padding: .1rem .2rem;
 }
 
 pre {
   background-color: #ececec;
   line-height: 1.4;
   overflow-x: auto;
-  padding: 1em;
+  padding: 1rem;
 }
 
 .highlight pre ::selection {
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
   color: inherit;
 }
 
@@ -130,7 +137,7 @@ pre code {
 
 /* Containers */
 .content {
-  margin-bottom: 4em;
+  margin-bottom: 4rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
@@ -143,24 +150,52 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 1em 0;
-  line-height: 2.5em;
+  margin: 1rem 0;
+  line-height: 2.5rem;
 }
 
 header .main {
   font-size: 1.5rem;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.2rem;
-  margin-top: 2em;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2rem;
 }
 
-h1::before { color: var(--maincolor); content: '# '; }
-h2::before { color: var(--maincolor); content: '## '; }
-h3::before { color: var(--maincolor); content: '### '; }
-h4::before { color: var(--maincolor); content: '#### '; }
-h5::before { color: var(--maincolor); content: '##### '; }
-h6::before { color: var(--maincolor); content: '###### '; }
+h1::before {
+  color: var(--maincolor);
+  content: '# ';
+}
+
+h2::before {
+  color: var(--maincolor);
+  content: '## ';
+}
+
+h3::before {
+  color: var(--maincolor);
+  content: '### ';
+}
+
+h4::before {
+  color: var(--maincolor);
+  content: '#### ';
+}
+
+h5::before {
+  color: var(--maincolor);
+  content: '##### ';
+}
+
+h6::before {
+  color: var(--maincolor);
+  content: '###### ';
+}
 
 .meta {
   color: #999;
@@ -176,6 +211,10 @@ h6::before { color: var(--maincolor); content: '###### '; }
 .post-content {
   flex: 3;
   min-width: 0;
+}
+
+ul.posts .post {
+  padding: 0.3rem 0;
 }
 
 .toc {
@@ -202,16 +241,19 @@ footer {
   padding: 2rem 0rem;
   margin-top: 2rem;
 }
+
 .soc {
   display: flex;
   align-items: center;
   border-bottom: none;
 }
+
 .border {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   border: 1px solid;
 }
+
 .footer-info {
   padding: var(--footer-padding);
 }
@@ -227,7 +269,7 @@ time {
 
 /* Posts */
 article .title {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 
@@ -235,7 +277,7 @@ article .title {
 .callout {
   background-color: var(--callouctcolor);
   color: #fff;
-  padding: 1em;
+  padding: 1rem;
 }
 
 .callout p {
@@ -281,40 +323,45 @@ article .title {
 }
 
 .site-description {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-.tags li::before{
+
+.tags li::before {
   content: "🏷 ";
 }
-.tags a{
-  border-bottom: 3px solid var(--maincolor); 
+
+.tags a:hover {
+  color: white;
+  background-color: var(--hovercolor);
 }
-.tags a:hover{
-  color:white;
-  background-color: var(--hovercolor); 
-}
-svg{
+
+svg {
   max-height: 15px;
 }
-.soc:hover{
+
+.soc:hover {
   color: white;
 }
-.draft-label{ 
-    color: var(--bordercl);
-    text-decoration: none;
-    padding: 2px 4px;
-    border-radius: 4px;
-    margin-left: 6px;
-    background-color: #f9f2f4;
+
+.draft-label {
+  color: var(--bordercl);
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 6px;
+  background-color: #f9f2f4;
 }
+
 .highlight {
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
+
 .highlight pre code[class*="language-"] {
   -webkit-overflow-scrolling: touch;
 }
+
 .highlight pre code[class*="language-"]::before {
   background: black;
   border-radius: 0 0 0.25rem 0.25rem;
@@ -331,51 +378,59 @@ svg{
 
 .highlight pre code[class=language-javaScript]::before,
 .highlight pre code[class="language-js"]::before {
-content: "js";
-background: #f7df1e;
-color: black;
+  content: "js";
+  background: #f7df1e;
+  color: black;
 }
+
 .highlight pre code[class*='language-yml']::before,
 .highlight pre code[class*='language-yaml']::before {
-content: 'yaml';
-background: #f71e6a;
-color: white;
+  content: 'yaml';
+  background: #f71e6a;
+  color: white;
 }
+
 .highlight pre code[class*='language-shell']::before,
 .highlight pre code[class*='language-bash']::before,
 .highlight pre code[class*='language-sh']::before {
-content: 'shell';
-background: green;
-color:white
+  content: 'shell';
+  background: green;
+  color: white
 }
-.highlight pre code[class*='language-json']::before{
-content: 'json';
-background: dodgerblue;
- color: #000000 
+
+.highlight pre code[class*='language-json']::before {
+  content: 'json';
+  background: dodgerblue;
+  color: #000000
 }
+
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
-content: 'py';
-background: blue;
-color: yellow ;
+  content: 'py';
+  background: blue;
+  color: yellow;
 }
-.highlight pre code[class*='language-css']::before{
-content: 'css';
-background: cyan;
-color: black ;
+
+.highlight pre code[class*='language-css']::before {
+  content: 'css';
+  background: cyan;
+  color: black;
 }
-.highlight pre code[class*='language-go']::before{
-content: 'Go';
-background: cyan;
-color: royalblue ;
+
+.highlight pre code[class*='language-go']::before {
+  content: 'Go';
+  background: cyan;
+  color: royalblue;
 }
+
 .highlight pre code[class*='language-md']::before,
-.highlight pre code[class*='language-md']::before{
-content: 'Markdown';
-background: royalblue;
-color: whitesmoke ;
+.highlight pre code[class*='language-md']::before {
+  content: 'Markdown';
+  background: royalblue;
+  color: whitesmoke;
 }
-.highlight pre code[class*='language-ts']::before{
+
+.highlight pre code[class*='language-ts']::before {
   content: 'TS';
   background: #3178C6;
   color: #fff;
@@ -387,13 +442,13 @@ table {
   border-collapse: collapse;
 }
 
-table th{
+table th {
   padding: 6px 13px;
   border: 1px solid #dfe2e5;
   font-size: large;
 }
 
-table td{
+table td {
   padding: 6px 13px;
   border: 1px solid #dfe2e5;
 }
